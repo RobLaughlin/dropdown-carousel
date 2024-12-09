@@ -1,0 +1,43 @@
+.dropdown-menu {
+    width: 300px;
+    border-radius: 4px;
+    background-color: black;
+}
+
+.dropdown-menu .hidden {
+    display: none;
+}
+
+.dropdown-menu a:link {
+    text-decoration: none;
+}
+
+.dropdown-menu.closed {
+    height: 32px;
+}
+
+.dropdown-menu .menu {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.dropdown-menu.closed .menu {
+    height: 32px;
+}
+
+.dropdown-menu .menu:hover {
+    opacity: 1;
+}
+
+.dropdown-menu .itemContainer {
+    padding-bottom: 8px;
+    background-color: gray;
+}
+
+.dropdown-menu .items {
+    list-style: none;
+    padding: 16px 0 8px 16px;
+    margin: 0;
+}
