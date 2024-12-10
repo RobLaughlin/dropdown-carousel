@@ -1,5 +1,5 @@
 import "./DropdownMenu.css";
-import verticalDots from "./dots-vertical.svg";
+import verticalDots from "../../icons/dots-vertical.svg";
 import { string2node } from "../utils";
 
 export class MenuItem {
