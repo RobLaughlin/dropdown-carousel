@@ -2,9 +2,17 @@
     box-sizing: border-box;
 }
 
+img {
+    max-width: 100%;
+}
+
 .navbar {
     background-color: black;
     color: white;
     border-radius: 4px;
     height: 32px;
+}
+
+.flexContainer {
+    display: flex;
 }
