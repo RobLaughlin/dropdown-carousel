@@ -16,7 +16,8 @@ const DATA = {
     `${placeholder1}`, 
     `${placeholder2}`,
     `${placeholder3}`
-  ]
+  ],
+  SLIDE_INTERVAL_MS: 5000
 };
 
 // Inject dropdown menu into navbar
@@ -26,5 +27,11 @@ navbar.appendChild(dropdown);
 
 let carouselContainer = document.querySelector(".carouselContainer");
 let carousel = createCarousel(DATA.IMAGES);
+
 carousel.render(carouselContainer);
+setInterval(() => {
+    carousel.next();
+    carousel.render(carouselContainer);
+}, DATA.SLIDE_INTERVAL_MS);
+
 
