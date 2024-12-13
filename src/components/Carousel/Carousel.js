@@ -15,10 +15,18 @@ export class Image {
         this.alt = alt;
     }
 }
-
+/**
+ * Creates the carousel component
+ * @param {Image[]} images A list of images to be put into the carousel 
+ * @returns {Object} The carousel object
+ */
 export function createCarousel(images) {
     let currentImage = 0;
 
+    /**
+     * Render the carousel component inside of the root node
+     * @param {Node} root The root node to inject the carousel component 
+     */
     function render(root) {
         let carousel = string2node(/* html */`
             <div>
@@ -40,10 +48,16 @@ export function createCarousel(images) {
         root.querySelector(".rightArrow").addEventListener("click", () => { next(); render(root); });
     };
 
+    /**
+     * Selects the next image in the carousel
+     */
     function next() {
         currentImage = (currentImage + 1) % images.length;
     }
 
+    /**
+     * Selects the previous image in the carousel
+     */
     function previous() {
         currentImage = ((currentImage - 1) + images.length) % images.length;
     }
