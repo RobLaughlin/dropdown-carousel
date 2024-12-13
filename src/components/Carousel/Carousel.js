@@ -10,6 +10,11 @@ export class Image {
     src
     alt
 
+    /**
+     * A basic Image data structure
+     * @param {string} src The image source 
+     * @param {string} alt The alternate description of the image
+     */
     constructor(src, alt) {
         this.src = src;
         this.alt = alt;
