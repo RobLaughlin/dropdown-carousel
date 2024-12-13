@@ -49,7 +49,7 @@ export function createDropdownMenu(items) {
             </div>
         </div>
     `);
-
+    
     let menu = dropdownMenu.querySelector(".menu");
     menu.addEventListener("click", dropdownMenuClicked);
 

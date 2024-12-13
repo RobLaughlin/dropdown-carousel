@@ -1,6 +1,8 @@
 import {createDropdownMenu, MenuItem} from "../components/DropdownMenu/DropdownMenu";
 import { createCarousel } from "../components/Carousel/Carousel";
-import placeholder1 from "../images/1.gif";
+import placeholder1 from "../images/400x200.gif";
+import placeholder2 from "../images/800x200.gif";
+import placeholder3 from "../images/800x800.gif";
 
 import "../css/index.css";
 import "../components/Carousel/Carousel.css";
@@ -12,7 +14,8 @@ const DATA = {
   ],
   IMAGES: [
     `${placeholder1}`, 
-    "img2"
+    `${placeholder2}`,
+    `${placeholder3}`
   ]
 };
 
@@ -21,7 +24,7 @@ let navbar = document.getElementsByClassName("navbar")[0];
 const dropdown = createDropdownMenu(DATA.MENU_ITEMS);
 navbar.appendChild(dropdown);
 
-let body = document.getElementsByTagName("body")[0];
-const carousel = createCarousel(DATA.IMAGES);
-body.appendChild(carousel.render());
+let carouselContainer = document.querySelector(".carouselContainer");
+let carousel = createCarousel(DATA.IMAGES);
+carousel.render(carouselContainer);
 

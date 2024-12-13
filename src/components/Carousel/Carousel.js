@@ -19,9 +19,9 @@ export class Image {
 export function createCarousel(images) {
     let currentImage = 0;
 
-    function render() {
-        return string2node(/* html */`
-            <div class="carouselContainer">
+    function render(root) {
+        let carousel = string2node(/* html */`
+            <div>
                 <img src=${leftArrow} alt="left arrow" class="leftArrow arrow">
                 <div class="carousel">
                     <img class="content" src="${images[currentImage]}", alt="Image ${currentImage+1} out of ${images.length}"/>
@@ -34,8 +34,12 @@ export function createCarousel(images) {
                 <img src=${rightArrow} alt="right arrow" class="rightArrow arrow">
             </div>
         `);
+        
+        root.innerHTML = carousel.innerHTML;
+        root.querySelector(".leftArrow").addEventListener("click",  () => { previous(); render(root); } );
+        root.querySelector(".rightArrow").addEventListener("click", () => { next(); render(root); });
     };
-    
+
     function next() {
         currentImage = (currentImage + 1) % images.length;
     }

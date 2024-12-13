@@ -9,6 +9,12 @@
 
 .carouselContainer .arrow {
     width: 50px;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.carouselContainer .arrow:hover {
+    opacity: 1;
 }
 
 .carouselContainer .carousel {
@@ -20,6 +26,8 @@
 
 .carouselContainer .carousel .content {
     width: 100%;
+    min-width: 200px;
+    max-height: 800px;
 }
 
 .carouselContainer .carousel .currentPicture {
@@ -31,5 +39,10 @@
 }
 
 .carouselContainer .carousel .circleIcon {
-   width: 10px; 
+   width: 10px;
+   opacity: 0.3;
+}
+
+.carouselContainer .carousel .circleIcon.selected {
+    opacity: 1;
 }
